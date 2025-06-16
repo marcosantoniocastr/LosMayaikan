@@ -290,29 +290,7 @@
     AOS.init();
   </script>
 
-  <script>
-document.addEventListener("DOMContentLoaded", () => {
-  const observer = new MutationObserver(() => {
-    const section = document.querySelector('#cultural-section');
-    if (section && section.style.display !== "none") {
-      // Forzar recarga del lottie-player y model-viewer
-      const lottie = section.querySelector("lottie-player");
-      const model = section.querySelector("model-viewer");
 
-      // Reiniciar Lottie
-      const newLottie = lottie.cloneNode(true);
-      lottie.replaceWith(newLottie);
-
-      // Reiniciar Model Viewer
-      const newModel = model.cloneNode(true);
-      model.replaceWith(newModel);
-    }
-  });
-
-  // Observar cambios en el DOM (por ejemplo si estás usando `display: none`)
-  observer.observe(document.body, { childList: true, subtree: true });
-});
-</script>
 
 
   <!-- Import the component -->
